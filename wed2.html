@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sản phẩm - MobileWeb</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      padding-top: 70px;
+      background-color: #0a0f1a;
+      color: white;
+    }
+
+    .navbar {
+      background-color: #000;
+    }
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: white;
+    }
+
+    .navbar .nav-link.active {
+      color: #0d6efd !important;
+    }
+
+    .featured-product {
+      position: relative;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .featured-product img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      filter: brightness(0.8);
+      transition: filter 0.3s ease;
+    }
+
+    .featured-product:hover img {
+      filter: brightness(1);
+    }
+
+    .featured-product-info {
+      position: absolute;
+      top: 30%;
+      left: 8%;
+      color: white;
+      max-width: 450px;
+    }
+
+    .featured-product-info h2 {
+      font-weight: 800;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .featured-product-info p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .btn-featured-buy {
+      font-weight: 700;
+      background-color: #007bff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      color: white;
+    }
+
+    .btn-featured-buy:hover {
+      background-color: #0056b3;
+    }
+
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      background-color: #121829;
+      color: white;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+
+    .product-img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .btn-buy {
+      background-color: #007bff;
+      border: none;
+      width: 100%;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      border-radius: 0 0 10px 10px;
+      color: white;
+    }
+
+    .btn-buy:hover {
+      background-color: #0056b3;
+    }
+
+    .card-text.text-muted {
+      color: #d1d1d1 !important;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase" href="wed1.html">MobileWeb</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="wed1.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="wed2.html">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="wed3.html">Đăng nhập</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+
+    <!-- Sản phẩm nổi bật -->
+    <div class="featured-product">
+      <img src="sp0.jpg" alt="Điện thoại cao cấp" />
+      <div class="featured-product-info">
+        <h2>Điện thoại cao cấp X1000</h2>
+        <p>
+          Màn hình 6.8 inch AMOLED<br>
+          Camera 108MP<br>
+          Pin 5000mAh<br>
+          Sạc nhanh 65W
+        </p>
+        <button class="btn btn-featured-buy">Mua ngay</button>
+      </div>
+    </div>
+
+    <!-- Các sản phẩm khác -->
+    <div class="row g-4">
+
+      <!-- Lặp sản phẩm  -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp1.jpg" alt="Điện thoại A" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title"> Samsung Galaxy A05</h5>
+            <p class="card-text text-muted">
+             Màn hình: 6.7" PLS LCD HD+<br>
+
+             Camera: 50MP<br>
+
+             Chip: MediaTek Helio G85<br>
+
+             Pin: 5000mAh, sạc nhanh 25W
+            </p>
+            <p class="fw-bold">5,990,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 2 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp2.jpg" alt="" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title">Realme C53 (6GB/128GB)</h5>
+            <p class="card-text text-muted">
+            Màn hình: 6.74" IPS LCD, 90Hz<br>
+
+            Camera: 50MP<br>
+
+            Chip: Unisoc T612<br>
+
+            Pin: 5000mAh, sạc nhanh 33W
+          </p>
+            <p class="fw-bold">3,700,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 3 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp3.jpg" alt="Điện thoại C" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title">Redmi 13C (6GB/128GB)</h5>
+            <p class="card-text text-muted">
+            Màn hình: 6.74" IPS LCD, 90Hz<br>
+
+            Camera: 50MP<br>
+
+            Chip: Helio G85<br>
+
+            Pin: 5000mAh, sạc nhanh 18W
+          </p>
+            <p class="fw-bold">3,390,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 4 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp4.jpg" alt="Điện thoại D" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title"> Vivo Y17s (6GB/128GB)</h5>
+            <p class="card-text text-muted">
+             Màn hình: 6.56" IPS LCD HD+<br>
+
+             Camera: 50MP<br>
+
+             Chip: Helio G85<br>
+
+             Pin: 5000mAh
+           </p>
+            <p class="fw-bold">3,399,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 5 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp5.jpg" alt="Điện thoại E" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title"> Itel P55 (4GB/128GB)</h5>
+            <p class="card-text text-muted">
+            Màn hình: 6.6" HD+, 90Hz<br>
+
+            Camera: 50MP AI<br>
+
+            Chip: Unisoc T606<br>
+
+            Pin: 5000mAh, sạc nhanh 18W</p>
+            <p class="fw-bold">6,190,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 6 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp6.jpg" alt="Điện thoại F" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title"> Redmi Note 13 (8GB/128GB)</h5>
+            <p class="card-text text-muted"> 
+           Màn hình: 6.67" AMOLED, 120Hz<br>
+
+           Camera: 108MP<br>
+
+           Chip: Snapdragon 685<br>
+
+           Pin: 5000mAh, sạc nhanh 33W</p>
+            <p class="fw-bold">4,290,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 7 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp7.jpg" alt="Điện thoại G" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy A15 (8GB/128GB)</h5>
+            <p class="card-text text-muted">
+              Màn hình: 6.5" Super AMOLED, 90Hz<br>
+
+              Camera: 50MP<br>
+
+              Chip: MediaTek Helio G99<br>
+
+              Pin: 5000mAh, sạc nhanh 25W
+           </p>
+            <p class="fw-bold">4,990,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sản phẩm 8 -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="sp8.jpg" alt="Điện thoại H" class="card-img-top product-img" />
+          <div class="card-body">
+            <h5 class="card-title">Realme Narzo 60x 5G (6GB/128GB)</h5>
+            <p class="card-text text-muted">
+              Màn hình: 6.72" IPS LCD, 120Hz<br>
+
+              Camera: 64MP<br>
+
+              Chip: Dimensity 6100+ (5G)<br>
+
+              Pin: 5000mAh, sạc nhanh 80W
+           </p>
+            <p class="fw-bold">4,990,000₫</p>
+            <button class="btn btn-buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+      <!-- Sản phẩm 9 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp9.jpg" alt="Điện thoại I" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">iPhone 13 (128GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.1" OLED Super Retina XDR<br>
+        Camera: 12MP kép<br>
+        Chip: A15 Bionic<br>
+        Pin: 3240mAh
+      </p>
+      <p class="fw-bold">17,990,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 10 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp10.jpg" alt="Điện thoại J" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">OPPO A78 (8GB/256GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.43" AMOLED FHD+<br>
+        Camera: 50MP<br>
+        Chip: Snapdragon 680<br>
+        Pin: 5000mAh, sạc nhanh 67W
+      </p>
+      <p class="fw-bold">6,490,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 11 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp11.jpg" alt="Điện thoại K" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">Xiaomi 14 (12GB/256GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.36" AMOLED, 120Hz<br>
+        Camera: Leica 50MP<br>
+        Chip: Snapdragon 8 Gen 3<br>
+        Pin: 4610mAh, sạc 90W
+      </p>
+      <p class="fw-bold">22,990,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 12 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp12.jpg" alt="Điện thoại L" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">Vsmart Star 5 (3GB/64GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.5" IPS HD+<br>
+        Camera: 13MP AI<br>
+        Chip: MediaTek Helio G35<br>
+        Pin: 5000mAh
+      </p>
+      <p class="fw-bold">2,690,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 13 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp13.jpg" alt="Điện thoại M" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">iPhone 15 Pro Max (256GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.7" OLED LTPO 120Hz<br>
+        Camera: 48MP + Tele 5x<br>
+        Chip: A17 Pro<br>
+        Pin: 4422mAh, sạc nhanh
+      </p>
+      <p class="fw-bold">34,990,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 14 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp14.jpg" alt="Điện thoại N" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">Realme Note 50 (4GB/64GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.74" IPS LCD<br>
+        Camera: 13MP<br>
+        Chip: Unisoc T612<br>
+        Pin: 5000mAh, sạc 10W
+      </p>
+      <p class="fw-bold">2,390,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 15 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp15.jpg" alt="Điện thoại O" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">Samsung Galaxy Z Flip5</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.7" AMOLED 120Hz<br>
+        Camera: 12MP kép<br>
+        Chip: Snapdragon 8 Gen 2<br>
+        Pin: 3700mAh, sạc 25W
+      </p>
+      <p class="fw-bold">24,990,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 16 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp16.jpg" alt="Điện thoại P" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">Xiaomi POCO X6 Pro</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.67" AMOLED 120Hz<br>
+        Camera: 64MP OIS<br>
+        Chip: Dimensity 8300 Ultra<br>
+        Pin: 5000mAh, sạc 67W
+      </p>
+      <p class="fw-bold">7,990,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 17 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp17.jpg" alt="Điện thoại Q" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">TECNO POVA 5 Pro</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.78" IPS LCD, 120Hz<br>
+        Camera: 50MP<br>
+        Chip: Dimensity 6080 (5G)<br>
+        Pin: 5000mAh, sạc 68W
+      </p>
+      <p class="fw-bold">4,490,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sản phẩm 18 -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+  <div class="card product-card shadow-sm">
+    <img src="sp18.jpg" alt="Điện thoại R" class="card-img-top product-img" />
+    <div class="card-body">
+      <h5 class="card-title">vivo V30 5G (12GB/256GB)</h5>
+      <p class="card-text text-muted">
+        Màn hình: 6.78" AMOLED 120Hz<br>
+        Camera: 50MP<br>
+        Chip: Snapdragon 7 Gen 3<br>
+        Pin: 5000mAh, sạc nhanh 80W
+      </p>
+      <p class="fw-bold">10,990,000₫</p>
+      <button class="btn btn-buy">Mua ngay</button>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+  </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

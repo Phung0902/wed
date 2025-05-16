@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Review Điện Thoại Nổi Bật - MobileWeb</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e0f7ff;
+      scroll-behavior: smooth;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      background: #00111f; /* fallback */
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      opacity: 0.15;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+    nav.navbar {
+      background-color: rgba(0,0,0,0.8) !important;
+      z-index: 1000;
+    }
+    section.product-review {
+      scroll-snap-align: start;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 5rem;
+      backdrop-filter: blur(8px);
+      background: rgba(0, 25, 45, 0.5);
+    }
+    section.product-review:nth-child(odd) {
+      background: rgba(0, 30, 60, 0.6);
+    }
+    .product-img {
+      max-width: 40%;
+      max-height: 80vh;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #00ffff;
+      object-fit: contain;
+    }
+    .product-info {
+      max-width: 50%;
+      text-align: left;
+    }
+    .product-info h2 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 12px #00ffff;
+    }
+    .product-info ul {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      padding-left: 1.2rem;
+      list-style: none;
+      color: #b3f0ff;
+    }
+    .product-info ul li::before {
+      content: "✔";
+      color: #00ffff;
+      margin-right: 0.8rem;
+      font-weight: bold;
+    }
+    .btn-next {
+      margin-top: 2.5rem;
+      font-size: 1.6rem;
+      padding: 0.9rem 2.5rem;
+      background-color: #00e5ff;
+      border: none;
+      border-radius: 12px;
+      color: #001f33;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00e5ff;
+      transition: all 0.3s ease;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .btn-next:hover {
+      background-color: #00b8cc;
+      box-shadow: 0 0 35px #00b8cc;
+      color: #e0f7ff;
+    }
+    /* Responsive nhỏ hơn 768px */
+    @media(max-width: 768px) {
+      section.product-review {
+        flex-direction: column;
+        padding: 2rem 2rem;
+        height: auto;
+        scroll-snap-align: none;
+      }
+      .product-img, .product-info {
+        max-width: 90%;
+        text-align: center;
+      }
+      .product-info h2 {
+        font-size: 3rem;
+      }
+      .product-info ul {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+      .btn-next {
+        font-size: 1.2rem;
+        padding: 0.7rem 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-uppercase" href="#">MobileWeb</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="wed1.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link " href="wed2.html"> Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="wed3.html">Đăng nhập</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Review các điện thoại -->
+  <main style="margin-top: 70px;">
+
+    <section class="product-review" id="product1">
+      <img src="15pro.jpg" alt="iPhone 15 Pro Max" class="product-img" />
+      <div class="product-info">
+        <h2>iPhone 15 Pro Max</h2>
+        <ul>
+          <li>Chip A17 Pro - Hiệu năng mạnh mẽ vượt trội</li>
+          <li>Camera 48MP với cảm biến lớn, zoom quang 5x</li>
+          <li>Màn hình Super Retina XDR 6.7” ProMotion 120Hz</li>
+          <li>Khung titan bền bỉ, nhẹ nhàng</li>
+          <li>Hỗ trợ sạc nhanh, USB-C, Dynamic Island</li>
+        </ul>
+   
+      </div>
+    </section>
+    <section class="product-review" id="product4">
+  <img src="gb1.jpg" alt="Google Pixel 8 Pro" class="product-img" />
+  <div class="product-info">
+    <h2>Google Pixel 8 Pro</h2>
+    <ul>
+      <li>Camera chính 50MP với AI xử lý ảnh cực kỳ thông minh</li>
+      <li>Chip Tensor G3 độc quyền, tối ưu hiệu suất và bảo mật</li>
+      <li>Màn hình LTPO OLED 6.7” siêu mượt với 120Hz</li>
+      <li>Phần mềm Android gốc, cập nhật nhanh nhất</li>
+      <li>Tích hợp cảm biến đo nhiệt độ độc đáo</li>
+    </ul>
+
+  </div>
+</section>
+
+<section class="product-review" id="product5">
+  <img src="ut.jpg" alt="OPPO Find X7 Ultra" class="product-img" />
+  <div class="product-info">
+    <h2>OPPO Find X7 Ultra</h2>
+    <ul>
+      <li>Camera kép 50MP với cảm biến Sony IMX890 chất lượng cao</li>
+      <li>Zoom quang học 6x, zoom số lên tới 120x</li>
+      <li>Chip Snapdragon 8 Gen 3 hiệu năng cực mạnh</li>
+      <li>Pin 5000mAh, sạc nhanh SuperVOOC 100W</li>
+      <li>Màn hình AMOLED 2K cong viền tuyệt đẹp</li>
+    </ul>
+
+  </div>
+</section>
+
+
+    <section class="product-review" id="product2">
+      <img src="ss.jpg" alt="Samsung Galaxy S24 Ultra" class="product-img" />
+      <div class="product-info">
+        <h2>Samsung Galaxy S24 Ultra</h2>
+        <ul>
+          <li>Màn hình Dynamic AMOLED 2X 6.8" với 120Hz</li>
+          <li>Camera chính 200MP, zoom quang 10x siêu nét</li>
+          <li>Chip Snapdragon 8 Gen 3 mạnh nhất hiện nay</li>
+          <li>Pin 5000mAh, sạc nhanh 45W và sạc không dây</li>
+          <li>Hệ điều hành One UI tối ưu hiệu năng</li>
+        </ul>
+    
+      </div>
+    </section>
+
+    <section class="product-review" id="product3">
+      <img src="xam2.jpg" alt="Xiaomi 14 Pro" class="product-img" />
+      <div class="product-info">
+        <h2>Xiaomi 14 Pro</h2>
+        <ul>
+          <li>Màn hình AMOLED 6.73" 120Hz sắc nét</li>
+          <li>Chip Snapdragon 8 Gen 2 mạnh mẽ</li>
+          <li>Camera Leica 50MP với nhiều chế độ AI</li>
+          <li>Pin 4600mAh, sạc siêu nhanh 120W</li>
+          <li>Thiết kế tinh tế, hoàn thiện cao cấp</li>
+        </ul>
+       
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
